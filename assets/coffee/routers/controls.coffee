@@ -6,6 +6,7 @@ jQuery ->
   button_modal = new app.ButtonModal()
   alert_modal = new app.AlertModal()
   table_modal = new app.TableModal()
+  pagination_modal = new app.PaginationModal()
 
   class app.Controller extends Backbone.Router
     routes:
@@ -13,6 +14,7 @@ jQuery ->
       button: "buttonModal"
       alert: "alertModal"
       table: "tableModal"
+      pagination: "paginationModal"
 
     gridModal: ->
       grid_modal.show()
@@ -25,3 +27,6 @@ jQuery ->
       
     tableModal: ->
       table_modal.show()
+      
+    paginationModal: ->
+      pagination_modal.show()
