@@ -5,7 +5,5 @@ jQuery ->
 
   new app.Controller()
   Backbone.history.start()
-
-  $("#main").droppable drop: (event, ui) ->
-    $(ui.draggable).appendTo this
-    $(ui.draggable).removeAttr "style"
+  
+  app.area_view = new app.AreaView()

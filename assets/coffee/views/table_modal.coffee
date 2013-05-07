@@ -26,4 +26,4 @@ jQuery ->
     createTable: ->
       @hide()
       view = new app.TableView(cols: @cols(), rows: @rows(), style: @style())
-      $("#cook").append view.render().el
+      app.area_view.draw view.render().el

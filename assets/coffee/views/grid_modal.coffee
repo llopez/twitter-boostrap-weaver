@@ -33,7 +33,7 @@ jQuery ->
       if @isValid()
         @hide()
         view = new app.RowView(dimension: @values())
-        $("#cook").append view.render().el
+        app.area_view.draw view.render().el
       else
         alert "The sum of the columns must be 12"
 

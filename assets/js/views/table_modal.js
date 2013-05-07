@@ -52,7 +52,7 @@ jQuery(function() {
         rows: this.rows(),
         style: this.style()
       });
-      return $("#cook").append(view.render().el);
+      return app.area_view.draw(view.render().el);
     };
 
     return TableModal;

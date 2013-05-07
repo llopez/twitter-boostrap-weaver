@@ -59,7 +59,7 @@ jQuery(function() {
         view = new app.RowView({
           dimension: this.values()
         });
-        return $("#cook").append(view.render().el);
+        return app.area_view.draw(view.render().el);
       } else {
         return alert("The sum of the columns must be 12");
       }

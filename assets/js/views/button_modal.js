@@ -47,7 +47,7 @@ jQuery(function() {
         text: this.text(),
         size: this.size()
       });
-      return $("#cook").append(view.render().el);
+      return app.area_view.draw(view.render().el);
     };
 
     return ButtonModal;

@@ -23,4 +23,4 @@ jQuery ->
     createButton: ->
       @hide()
       view = new app.ButtonView(text: @text(), size: @size())
-      $("#cook").append view.render().el
+      app.area_view.draw view.render().el

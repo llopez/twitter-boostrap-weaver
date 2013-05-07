@@ -22,5 +22,7 @@ jQuery ->
 
     createAlert: ->
       @hide()
-      view = new app.AlertView(text: @text(), type: @type())
-      $("#cook").append view.render().el
+      view = new app.AlertView
+        text: @text()
+        type: @type()
+      app.area_view.draw view.render().el
