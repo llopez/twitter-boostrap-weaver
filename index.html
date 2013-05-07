@@ -12,9 +12,9 @@
       <div class="navbar-inner">
         <a class="brand" href="#">Bootstrap Layout Designer</a>
         <ul class="nav nav-pills">
-          <li><a href="#insert/table" class="element">Table</a></li>
-          <li><a href="#insert/button" class="element">Button</a></li>
-          <li><a href="#insert/alert" class="element">Alert</a></li>
+          <li><a href="#table" class="element">Table</a></li>
+          <li><a href="#alert" class="element">Alert</a></li>
+          <li><a href="#button" class="element">Button</a></li>
           <li><a href="#grid">Grid</a></li>
         </ul>
       </div>
@@ -71,6 +71,139 @@
           <button class="btn btn-primary" id="create">Create</button>
         </div>
       </div>
+
+
+      <div id="buttonModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" aria-hidden="true">×</button>
+          <h3>Button</h3>
+        </div>
+        <div class="modal-body">
+          <form class="form-horizontal">
+            <div class="control-group">
+              <label class="control-label" for="inputText">Text</label>
+              <div class="controls">
+                <input type="text" id="inputText" placeholder="Button">
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="inputSize">Size</label>
+              <div class="controls">
+                <label class="radio">
+                  <input type="radio" name="buttonSize" id="buttonSize1" value="small" checked>
+                  Small
+                </label>
+                <label class="radio">
+                  <input type="radio" name="buttonSize" id="buttonSize2" value="medium">
+                  Medium
+                </label>
+                <label class="radio">
+                  <input type="radio" name="buttonSize" id="buttonSize3" value="large">
+                  Large
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" aria-hidden="true" id="cancelButton">Cancel</button>
+          <button class="btn btn-primary" id="createButton">Create</button>
+        </div>
+      </div>
+      
+      <div id="alertModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" aria-hidden="true">×</button>
+          <h3>Alert</h3>
+        </div>
+        <div class="modal-body">
+          <form class="form-horizontal">
+            <div class="control-group">
+              <label class="control-label" for="inputText">Text</label>
+              <div class="controls">
+                <input type="text" id="inputText" placeholder="This is the alert text!">
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="inputSize">Size</label>
+              <div class="controls">
+                <label class="radio">
+                  <input type="radio" name="alertType" id="alertType1" value="" checked>
+                  Alert
+                </label>
+                <label class="radio">
+                  <input type="radio" name="alertType" id="alertType2" value="success">
+                  Success
+                </label>
+                <label class="radio">
+                  <input type="radio" name="alertType" id="alertType3" value="error">
+                  Error
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" aria-hidden="true" id="cancelAlert">Cancel</button>
+          <button class="btn btn-primary" id="createAlert">Create</button>
+        </div>
+      </div>
+
+
+      <div id="tableModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" aria-hidden="true">×</button>
+          <h3>Table</h3>
+        </div>
+        <div class="modal-body">
+          <form class="form-horizontal">
+            <div class="control-group">
+              <label class="control-label" for="inputColumnsCount">Columns count</label>
+              <div class="controls">
+                <input type="text" id="inputColumnsCount" placeholder="4">
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="inputRowsCount">Rows count</label>
+              <div class="controls">
+                <input type="text" id="inputRowsCount" placeholder="4">
+              </div>
+            </div>
+
+            <div class="control-group">
+              <label class="control-label" for="tableStyle1">Style</label>
+              <div class="controls">
+                <label class="radio">
+                  <input type="radio" name="tableStyle" id="tableStyle1" value="" checked>
+                  Table
+                </label>
+                <label class="radio">
+                  <input type="radio" name="tableStyle" id="tableStyle2" value="table-striped">
+                  Striped
+                </label>
+                <label class="radio">
+                  <input type="radio" name="tableStyle" id="tableStyle3" value="table-bordered">
+                  Bordered
+                </label>
+                <label class="radio">
+                  <input type="radio" name="tableStyle" id="tableStyle3" value="table-hover">
+                  Hover
+                </label>
+                <label class="radio">
+                  <input type="radio" name="tableStyle" id="tableStyle3" value="table-condensed">
+                  Condensed
+                </label>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" aria-hidden="true" id="cancelTable">Cancel</button>
+          <button class="btn btn-primary" id="createTable">Create</button>
+        </div>
+      </div>
+
+      
     </div>
     <script src="http://code.jquery.com/jquery.js"></script>
     <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
@@ -81,6 +214,9 @@
     <script src="assets/js/views/column.js"></script>
     <script src="assets/js/views/row.js"></script>
     <script src="assets/js/views/grid_modal.js"></script>
+    <script src="assets/js/views/button_modal.js"></script>
+    <script src="assets/js/views/alert_modal.js"></script>
+    <script src="assets/js/views/table_modal.js"></script>
     <script src="assets/js/views/button.js"></script>
     <script src="assets/js/views/table.js"></script>
     <script src="assets/js/views/alert.js"></script>

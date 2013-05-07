@@ -17,9 +17,32 @@ jQuery(function() {
 
     TableView.prototype.tagName = 'table';
 
-    TableView.prototype.className = 'table';
+    TableView.prototype.className = function() {
+      return "table " + this.options.style;
+    };
 
-    TableView.prototype.template = "<thead> <tr> <th>#</th> <th>First Name</th> <th>Last Name</th> <th>Username</th> </tr> </thead> <tbody> <tr> <td>1</td><td>Mark</td> <td>Otto</td> <td>@mdo</td> </tr> <tr> <td>2</td> <td>Jacob</td> <td>Thornton</td> <td>@fat</td> </tr> <tr><td>3</td> <td>Larry</td> <td>the Bird</td> <td>@twitter</td> </tr> </tbody>";
+    TableView.prototype.template = _.template("<thead></thead><tbody></tbody>");
+
+    TableView.prototype.render = function() {
+      var tds, ths;
+
+      this.$el.html(this.template(this.options));
+      this.$el.draggable({
+        cancel: false,
+        cursor: "move"
+      });
+      ths = _.reduce(_.range(this.options.cols), function(memo, num) {
+        return memo += "<th>Title " + num + "</th>";
+      }, "");
+      tds = _.reduce(_.range(this.options.cols), function(memo, num) {
+        return memo += "<td>column " + num + "</td>";
+      }, "");
+      this.$el.find('thead').html("<tr>" + ths + "</tr>");
+      _.each(_.range(this.options.rows), function(x) {
+        return this.$el.find('tbody').append("<tr>" + tds + "</tr>");
+      }, this);
+      return this;
+    };
 
     return TableView;
 

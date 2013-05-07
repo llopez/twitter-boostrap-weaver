@@ -5,9 +5,12 @@ var app,
 app = app || {};
 
 jQuery(function() {
-  var grid_modal, _ref;
+  var alert_modal, button_modal, grid_modal, table_modal, _ref;
 
   grid_modal = new app.GridModal();
+  button_modal = new app.ButtonModal();
+  alert_modal = new app.AlertModal();
+  table_modal = new app.TableModal();
   return app.Controller = (function(_super) {
     __extends(Controller, _super);
 
@@ -17,27 +20,26 @@ jQuery(function() {
     }
 
     Controller.prototype.routes = {
-      "insert/:element": "insert",
-      grid: "gridModal"
-    };
-
-    Controller.prototype.insert = function(element) {
-      var view;
-
-      if (element === "table") {
-        view = new app.TableView();
-      }
-      if (element === "button") {
-        view = new app.ButtonView();
-      }
-      if (element === "alert") {
-        view = new app.AlertView();
-      }
-      return $("#cook").append(view.render().el);
+      grid: "gridModal",
+      button: "buttonModal",
+      alert: "alertModal",
+      table: "tableModal"
     };
 
     Controller.prototype.gridModal = function() {
       return grid_modal.show();
+    };
+
+    Controller.prototype.buttonModal = function() {
+      return button_modal.show();
+    };
+
+    Controller.prototype.alertModal = function() {
+      return alert_modal.show();
+    };
+
+    Controller.prototype.tableModal = function() {
+      return table_modal.show();
     };
 
     return Controller;

@@ -17,9 +17,11 @@ jQuery(function() {
 
     ButtonView.prototype.tagName = 'button';
 
-    ButtonView.prototype.className = 'btn';
+    ButtonView.prototype.className = function() {
+      return "btn btn-" + this.options.size;
+    };
 
-    ButtonView.prototype.template = 'Button';
+    ButtonView.prototype.template = _.template("<%= text %>");
 
     return ButtonView;
 

@@ -17,9 +17,11 @@ jQuery(function() {
 
     AlertView.prototype.tagName = 'div';
 
-    AlertView.prototype.className = 'alert';
+    AlertView.prototype.className = function() {
+      return "alert alert-" + this.options.type;
+    };
 
-    AlertView.prototype.template = "<button type='button' class='close' data-dismiss='alert'>&times;</button><strong>Warning!</strong> Best check yo self, you're not looking too good.";
+    AlertView.prototype.template = _.template("<button type='button' class='close' data-dismiss='alert'>&times;</button><strong>Warning!</strong> <%= text %>");
 
     return AlertView;
 

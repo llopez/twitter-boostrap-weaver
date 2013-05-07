@@ -39,4 +39,3 @@ jQuery ->
 
     log: ->
       @$el.find("#total").html @total()
-  )

@@ -16,7 +16,7 @@ jQuery(function() {
     }
 
     ElementView.prototype.render = function() {
-      this.$el.html(this.template);
+      this.$el.html(this.template(this.options));
       this.$el.draggable({
         cancel: false,
         cursor: "move"

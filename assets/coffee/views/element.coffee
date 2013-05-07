@@ -3,7 +3,7 @@ app = app or {}
 jQuery ->
   class app.ElementView extends Backbone.View
     render: ->
-      @$el.html @template
+      @$el.html @template(@options)
       @$el.draggable
         cancel: false
         cursor: "move"

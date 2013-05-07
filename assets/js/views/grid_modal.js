@@ -1,39 +1,57 @@
-var app;
+var app,
+  __hasProp = {}.hasOwnProperty,
+  __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
 app = app || {};
 
 jQuery(function() {
-  return app.GridModal = Backbone.View.extend({
-    el: "#gridModal",
-    events: {
+  var _ref;
+
+  return app.GridModal = (function(_super) {
+    __extends(GridModal, _super);
+
+    function GridModal() {
+      _ref = GridModal.__super__.constructor.apply(this, arguments);
+      return _ref;
+    }
+
+    GridModal.prototype.el = "#gridModal";
+
+    GridModal.prototype.events = {
       "click button#create": "createGrid",
       "click button.close": "hide",
       "click button#cancel": "hide",
       "change input": "log"
-    },
-    hide: function() {
+    };
+
+    GridModal.prototype.hide = function() {
       return this.$el.modal("hide");
-    },
-    show: function() {
+    };
+
+    GridModal.prototype.show = function() {
       return this.$el.modal("show");
-    },
-    values: function() {
+    };
+
+    GridModal.prototype.values = function() {
       var arr;
 
       arr = _.map(this.$el.find("input"), function(x) {
         return parseInt(x.value);
       });
       return _.compact(arr);
-    },
-    total: function() {
+    };
+
+    GridModal.prototype.total = function() {
       return _.reduce(this.values(), (function(m, v) {
         return m + v;
       }), 0);
-    },
-    isValid: function() {
+    };
+
+    GridModal.prototype.isValid = function() {
       return this.total() === 12;
-    },
-    createGrid: function() {
+    };
+
+    GridModal.prototype.createGrid = function() {
       var view;
 
       if (this.isValid()) {
@@ -45,9 +63,13 @@ jQuery(function() {
       } else {
         return alert("The sum of the columns must be 12");
       }
-    },
-    log: function() {
+    };
+
+    GridModal.prototype.log = function() {
       return this.$el.find("#total").html(this.total());
-    }
-  });
+    };
+
+    return GridModal;
+
+  })(Backbone.View);
 });
