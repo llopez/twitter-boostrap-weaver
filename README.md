@@ -1,7 +1,7 @@
 Twitter Boostrap Weaver
 =======================
 
-Bootstrap Weaver is an HTML / JS *drag and drop* application for easy creation of Twitter Boostrap views
+Twitter Bootstrap Weaver is an HTML / JS *drag and drop* application for easy creation of Twitter Boostrap views
 
   - It is made with Backbone.js & CoffeeScript
   
@@ -18,6 +18,6 @@ Bootstrap Weaver uses:
 Installation
 ------------
 
-``` git clone [git-repo-url] BootstrapWeaver ```
-``` cd BootstrapWeaver ```
-``` open index.html ```
+    git clone [git-repo-url] BootstrapWeaver
+    cd BootstrapWeaver
+    open index.html
