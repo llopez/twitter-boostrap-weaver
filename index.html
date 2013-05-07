@@ -1,26 +1,42 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Bootstrap Layout Designer</title>
+    <title>Bootstrap Weaver</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
   </head>
   <body>
-    
     <div class="navbar">
       <div class="navbar-inner">
-        <a class="brand" href="#">Bootstrap Layout Designer</a>
-        <ul class="nav nav-pills">
-          <li><a href="#table" class="element">Table</a></li>
-          <li><a href="#alert" class="element">Alert</a></li>
-          <li><a href="#button" class="element">Button</a></li>
-          <li><a href="#grid">Grid</a></li>
+        <a class="brand" href="#">Bootstrap Weaver</a>
+        <ul class="nav">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Stuff
+              <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#table">Table</a></li>
+              <li><a href="#alert">Alert</a></li>
+              <li><a href="#button">Button</a></li>
+              <li><a href="#grid">Grid</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="nav pull-right">
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Options
+              <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#export">Export</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
-    </div>    
-    
-    
+    </div>
     <div class="container">
       <div class="row-fluid">
         <div class="span12" id="cook" style="border: 1px solid #ccc; min-height: 100px;">
@@ -31,8 +47,6 @@
         <div class="span12" id="main" style="border: 1px solid #ccc; min-height: 500px;">
         </div>
       </div>
-
-      <!-- Modal -->
       <div id="gridModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-header">
           <button type="button" class="close" aria-hidden="true">×</button>
@@ -71,8 +85,6 @@
           <button class="btn btn-primary" id="create">Create</button>
         </div>
       </div>
-
-
       <div id="buttonModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-header">
           <button type="button" class="close" aria-hidden="true">×</button>
@@ -110,7 +122,6 @@
           <button class="btn btn-primary" id="createButton">Create</button>
         </div>
       </div>
-      
       <div id="alertModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-header">
           <button type="button" class="close" aria-hidden="true">×</button>
@@ -148,8 +159,6 @@
           <button class="btn btn-primary" id="createAlert">Create</button>
         </div>
       </div>
-
-
       <div id="tableModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-header">
           <button type="button" class="close" aria-hidden="true">×</button>
@@ -169,7 +178,6 @@
                 <input type="text" id="inputRowsCount" placeholder="4">
               </div>
             </div>
-
             <div class="control-group">
               <label class="control-label" for="tableStyle1">Style</label>
               <div class="controls">
@@ -202,11 +210,9 @@
           <button class="btn btn-primary" id="createTable">Create</button>
         </div>
       </div>
-
-      
     </div>
-    <script src="http://code.jquery.com/jquery.js"></script>
-    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/jquery-ui.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
     <script src="assets/js/underscore.js"></script>
     <script src="assets/js/backbone.js"></script>
