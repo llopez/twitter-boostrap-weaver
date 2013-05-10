@@ -23,7 +23,7 @@ Installation
 
     git clone [git-repo-url] BootstrapWeaver
     cd BootstrapWeaver
-    open index.html
+    open public/index.html
 
 
 Development
