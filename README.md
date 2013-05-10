@@ -25,6 +25,10 @@ Installation
     cd BootstrapWeaver
     open public/index.html
 
+Live Demo
+---------
+
+* [Try the demo](http://llopez.github.io/twitter-boostrap-weaver)
 
 Development
 -----------
