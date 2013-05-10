@@ -22,6 +22,7 @@
               <li><a href="#button">Button</a></li>
               <li><a href="#grid">Grid</a></li>
               <li><a href="#pagination">Pagination</a></li>
+              <li><a href="#header">Header</a></li>
             </ul>
           </li>
         </ul>
@@ -207,6 +208,7 @@
           <button class="btn btn-primary" id="createTable">Create</button>
         </div>
       </div>
+      
       <div id="paginationModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-header">
           <button type="button" class="close" aria-hidden="true">×</button>
@@ -265,6 +267,37 @@
           <button class="btn btn-primary" id="createPagination">Create</button>
         </div>
       </div>
+      
+      <div id="headerModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" aria-hidden="true">×</button>
+          <h3>Header</h3>
+        </div>
+        <div class="modal-body">
+          <form class="form-horizontal">
+            
+            <div class="control-group">
+              <label class="control-label" for="inputText">Text</label>
+              <div class="controls">
+                <input type="text" id="inputText" placeholder="Example page header">
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="inputSubtext">Subtext</label>
+              <div class="controls">
+                <input type="text" id="inputSubtext" placeholder="Subtext for header">
+              </div>
+            </div>
+            
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn" aria-hidden="true" id="cancelHeader">Cancel</button>
+          <button class="btn btn-primary" id="createHeader">Create</button>
+        </div>
+      </div>
+      
+      
     </div>
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/jquery-ui.js"></script>
@@ -279,6 +312,8 @@
     <script src="assets/js/views/button_modal.js"></script>
     <script src="assets/js/views/alert_modal.js"></script>
     <script src="assets/js/views/table_modal.js"></script>
+    <script src="assets/js/views/header_modal.js"></script>
+    <script src="assets/js/views/header.js"></script>
     <script src="assets/js/views/button.js"></script>
     <script src="assets/js/views/pagination_modal.js"></script>
     <script src="assets/js/views/pagination.js"></script>

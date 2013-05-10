@@ -5,13 +5,14 @@ var app,
 app = app || {};
 
 jQuery(function() {
-  var alert_modal, button_modal, grid_modal, pagination_modal, table_modal, _ref;
+  var alert_modal, button_modal, grid_modal, header_modal, pagination_modal, table_modal, _ref;
 
   grid_modal = new app.GridModal();
   button_modal = new app.ButtonModal();
   alert_modal = new app.AlertModal();
   table_modal = new app.TableModal();
   pagination_modal = new app.PaginationModal();
+  header_modal = new app.HeaderModal();
   return app.Controller = (function(_super) {
     __extends(Controller, _super);
 
@@ -25,7 +26,8 @@ jQuery(function() {
       button: "buttonModal",
       alert: "alertModal",
       table: "tableModal",
-      pagination: "paginationModal"
+      pagination: "paginationModal",
+      header: "headerModal"
     };
 
     Controller.prototype.gridModal = function() {
@@ -46,6 +48,10 @@ jQuery(function() {
 
     Controller.prototype.paginationModal = function() {
       return pagination_modal.show();
+    };
+
+    Controller.prototype.headerModal = function() {
+      return header_modal.show();
     };
 
     return Controller;
