@@ -42,3 +42,11 @@ Open your favorite IDE
     $ mate .
     
 And then you can drink some Coffee!
+
+TODO
+----
+
+* Export code to haml / html
+* Edit / Remove added controls
+* Add more controls
+* See control preview before insert
